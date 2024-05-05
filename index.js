@@ -19,9 +19,9 @@ fs.readdir(directoryPath, (err, files) => {
     });
 
     allData.sort((a, b) => parseInt(a.id) - parseInt(b.id));
-    const finalData = { DegenOnchainPunks: allData };
+   
     const combinedFilePath = './metadata.json';
 
-    fs.writeFileSync(combinedFilePath, JSON.stringify(finalData, null, 4));
+    fs.writeFileSync(combinedFilePath, JSON.stringify(allData, null, 4));
     console.log("All JSON files have been combined and structured under the 'DegenOnchainPunks' key.");
 });
