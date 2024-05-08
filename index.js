@@ -23,5 +23,5 @@ fs.readdir(directoryPath, (err, files) => {
     const combinedFilePath = './metadata.json';
 
     fs.writeFileSync(combinedFilePath, JSON.stringify(allData, null, 4));
-    console.log("All JSON files have been combined and structured under the 'DegenOnchainPunks' key.");
+    console.log("All JSON files have been combined into metadata.json file.");
 });
